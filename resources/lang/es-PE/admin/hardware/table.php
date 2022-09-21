@@ -19,7 +19,7 @@ return [
     'serial'   		=> 'N. Serie',
     'status'   		=> 'Estado',
     'title'      	=> 'Equipo ',
-    'image'		    => 'Imagen de dispositivo',
+    'image'		    => 'Imagen',
     'days_without_acceptance' => 'Días Sin Aceptación',
     'monthly_depreciation' => 'Depreciación Mensual',
     'assigned_to'    => 'Asignado a',
