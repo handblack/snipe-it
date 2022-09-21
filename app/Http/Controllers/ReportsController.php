@@ -589,7 +589,7 @@ class ReportsController extends Controller
             \Log::debug('Added headers: '.$executionTime);
 
             $assets = \App\Models\Company::scopeCompanyables(Asset::select('assets.*'))->with(
-                'location', 'assetstatus', 'assetlog', 'company', 'defaultLoc', 'assignedTo',
+                'location', 'assetstatus', 'company', 'defaultLoc', 'assignedTo',
                 'model.category', 'model.manufacturer', 'supplier');
             
             if ($request->filled('by_location_id')) {
@@ -1006,7 +1006,11 @@ class ReportsController extends Controller
         }
         $assetItem = $acceptance->checkoutable;
 
-        $logItem = $assetItem->checkouts()->where('created_at', '=', $acceptance->created_at)->get()[0];
+        if (is_null($acceptance->created_at)){
+            return redirect()->route('reports/unaccepted_assets')->with('error', trans('general.bad_data'));
+        } else {
+            $logItem = $assetItem->checkouts()->where('created_at', '=', $acceptance->created_at)->get()[0];
+        }
 
         if(!$assetItem->assignedTo->locale){
             Notification::locale(Setting::getSettings()->locale)->send(

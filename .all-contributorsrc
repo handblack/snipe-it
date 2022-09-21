@@ -2702,6 +2702,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dsferruzza",
+      "name": "David Sferruzza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1931963?v=4",
+      "profile": "https://david.sferruzza.fr/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rnelsonee",
+      "name": "Rick Nelson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19511639?v=4",
+      "profile": "https://github.com/rnelsonee",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
