@@ -56,6 +56,7 @@ Form::macro('locales', function ($name = 'locale', $selected = null, $class = nu
       'es-CO'=> 'Spanish, Colombia',
       'es-MX'=> 'Spanish, Mexico',
       'es-VE'=> 'Spanish, Venezuela',
+      'es-PE'=> 'Spanish, Perú',
       'sv-SE'=> 'Swedish',
       'tl'=> 'Tagalog',
       'ta'=> 'Tamil',
